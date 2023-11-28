@@ -4,7 +4,6 @@ from objects import Operation
 def test_get_instance(operation_dict, test_path="test_operations.json"):
     operations = get_instances(operation_dict)
     load = load_operations(test_path)
-
     assert isinstance(operations, list)
     assert isinstance(operations[0], Operation)
     assert len(operations) == 2 #а не 3

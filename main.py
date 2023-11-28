@@ -2,6 +2,9 @@ from utils import load_operations, get_instances, get_executed_operations, opera
 from settings import OPERATIONS_PATH
 
 def main():
+    """
+    Главная функция программы
+    """
     operation = load_operations(OPERATIONS_PATH)
     instances = get_instances(operation)
     executed_operations = get_executed_operations(instances)

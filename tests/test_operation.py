@@ -16,6 +16,7 @@ def test_operation_date_converter(operation_instance):
         description="Перевод с карты на карту",
         out_from="МИР 8193813157568899",
         to="МИР 9425591958944146")
+
     assert operation.date_converter("2019-04-11T23:10:21.514616") == datetime.date(2019, 4, 11)
 
 

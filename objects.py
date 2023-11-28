@@ -47,13 +47,11 @@ class Operation:
 
     def payment_info_converter(self, info_payment):
         """
-        pass
-        :param info_payment:
-        :return:
+        Приводит заданные в json-файле данные
+        карты или счета к необходимому виду
+        :param info_payment: пример: Visa Platinum 7000791236476361
+        :return: пример: Visa Platinum 7000 79** **** 6361
         """
-        # MasterCard 8532498887072395)
-        # Visa Platinum 7000 79** **** 6361
-
         if info_payment:
             info_payment_list = info_payment.split(" ")
             if info_payment.startswith("Счет"):
@@ -78,4 +76,8 @@ class Operation:
         return ""
 
     def __repr__(self):
+        """
+        Возвращает (выводит) в необходимиом
+        виде данные в терминал
+        """
         return f"{self.date} {self.description}\n{self.out_from} -> {self.to}\n{self.operation_amount['amount']} {self.operation_amount['currency']['name']}\n"

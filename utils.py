@@ -58,10 +58,8 @@ def get_executed_operations(operations):
 
 def get_date(operation):
     """
-    pass
+    Функция возврящает операции по датам
     (Не стал применять "лямбду" - еще не разобрался)
-    :param operation:
-    :return:
     """
     return operation.date
 
